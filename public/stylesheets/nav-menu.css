@@ -1,0 +1,104 @@
+/*页面头部样式*/
+.headercss {
+    position: relative;
+    width: 100%;
+    background-color: #282933;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #6f5499;
+    height: 64px; 
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.24);
+}
+.clearFixcss {
+    zoom: 1;
+}
+.headercss img {
+    margin-left: 20px;
+}
+
+.headercss  a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.headercss a:hover {
+    text-decoration: underline;
+}
+/*菜单栏样式*/
+.bar-style {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;    
+    background-color: #6f5499;
+    height: 100%;    
+    list-style: none;
+}
+.sideBar-li {
+    display: flex;
+    align-items: center;
+}
+.sideBar-li  a:focus {
+    color: #014c8c;
+}
+.mybuttonicon, .myinputicon, .mytableicon, .myselectticon, .myshoppingicon {
+    list-style: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.mybuttonicon {
+    list-style-image: url(../images/button.svg);
+}
+.mybuttonicon:hover {
+    text-decoration: underline;
+}
+.myinputicon {
+    list-style-image: url(../images/input.svg);
+}
+.myinputicon:hover {
+    text-decoration: underline;
+}
+
+.mytableicon {
+    list-style-image: url(../images/table.svg);
+}
+.mytableicon:hover {
+    text-decoration: underline;
+}
+
+.myselectticon {
+    list-style-image: url(../images/select.svg);
+}
+.myselectticon:hover {
+    text-decoration: underline;
+}
+.myclockicon {
+    list-style-image: url(../images/clock.svg);
+}
+.myclockicon:hover {
+    text-decoration: underline;
+}
+.myshoppingicon {
+    list-style-image: url(../images/shopping.svg);
+}
+.myshoppingicon:hover {
+    text-decoration: underline;
+}
+/*主页面样式*/
+.main {
+     position: relative;
+     height: 100%;
+     /*margin: 0 0 0 220px;*/
+     overflow: initial;
+     background-color: #fff;
+ }
+.dropdown-menu a {
+    color: white !important;
+}
+.dropdown-menu a:hover {
+    color: #014c8c !important;
+}

@@ -1,0 +1,113 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/nav-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css">
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/iconfont/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/calc.css">
+<style>
+
+</style>
+</head>
+<body>
+    <div class="headercss clearFixcss">
+        <img src="../../images/nodejs.svg">
+        <div style="width: 100%">
+        <ul class="bar-style">
+            <li class="sideBar-li"><a href="homepage.html">HomePage</a></li>
+            <li class="sideBar-li"><a href="../htmls/fileOperator.html">FileOperator</a></li>
+            <li class="sideBar-li"><a href="../htmls/input.html">Input</a></li>
+            <li class="sideBar-li"><a href="../htmls/table.html">Table</a></li>
+            <li class="sideBar-li"><a href="../htmls/clock.html">Clock</a></li>
+            <li class="sideBar-li"><a href="../htmls/shopping-homepage.html">Shopping</a></li>
+            <li class="sideBar-li"><a href="../htmls/eCharts.html">ECharts</a></li>
+        </ul>
+    </div>
+        <a target="_blank" href="http://www.expressjs.com.cn/">Express</a>
+    </div>
+
+    <div class="main">
+        <li><i class="iconfont icon-wenhao"></i></li>
+        <li><i class="iconfont icon-shopping"></i></li>
+        <i class="iconfont icon-line"></i>
+        <div style="display: flex;justify-content: space-around;">
+            <div style="margin-top: 50px;justify-content: center;">
+                <canvas id="clock" height="200px" width="200px"></canvas>
+            </div>
+            <div style="width: 300px;height: 428px;" id="container">
+                <div id="calc" class="calc">
+                    <div id="top">
+                        <div id="win-tool">
+                            <span id="close" title="关闭" data-ico="✖">&nbsp;</span>
+                            <span id="max" title="最大化" data-ico="口">&nbsp;</span>
+                            <span id="resize" title="最小化" data-ico="◎"><i class="iconfont change">&#xe612;</i></span>
+                            <a id="skin" href="calc-black-v5.0.html" title="换肤"><i class="iconfont skin">&#xe602;</i></a>
+                            <!--<a id="news" href="news.html" title="新闻"><i class="iconfont news">&#xe60a;</i></a>-->
+                            <a id="history" href="javascript:void(0);" title="历史记录"><i id="h" class="iconfont history">&#xe60d;</i></a>
+                            <a id="about" href="javascript:;" title="关于"><i id="au" class="iconfont about">&#xe610;</i></a>
+                        </div>
+                        <div id="result">
+                            <div id="express"></div>
+                            <div id="res">0</div>
+                        </div>
+                    </div>
+                    <div id="bottom">
+                        <div class="row">
+                            <span id="reset" data-number="C">CE</span>
+                            <span id="remove" data-number="←">←</span>
+                            <span data-number="%">%</span>
+                            <span data-number="/" class="tool chu">÷</span>
+                        </div>
+                        <div class="row">
+                            <span data-number="7">7</span>
+                            <span data-number="8">8</span>
+                            <span data-number="9">9</span>
+                            <span data-number="*" class="tool cheng">×</span>
+                        </div>
+                        <div class="row">
+                            <span data-number="4">4</span>
+                            <span data-number="5">5</span>
+                            <span data-number="6">6</span>
+                            <span data-number="-" class="tool jiang">ㅡ</span>
+                        </div>
+                        <div class="row">
+                            <span data-number="1">1</span>
+                            <span data-number="2">2</span>
+                            <span data-number="3">3</span>
+                            <span data-number="+" class="tool add">＋</span>
+                        </div>
+                        <div class="row">
+                            <span data-number="0" class="zero">0</span>
+                            <span data-number="." class="dian">.</span>
+                            <span id="equals" data-number="=" class="tool eq">＝</span>
+                        </div>
+                    </div>
+
+                    <div id="historyBox">
+                        <div class="con">
+                            <ul></ul>
+                        </div>
+                        <div class="remove">
+                            <a href="javascript:;" title="清空历史记录"><i class="iconfont del">&#xe613;</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+    </div>
+    <script src="../frontend/clock.js"></script>
+    <script src="../frontend/calc.js"></script>
+    <script>
+    var dom = document.getElementById('clock');
+    var ctx = dom.getContext('2d');
+    var width = ctx.canvas.width;
+    var height = ctx.canvas.height;
+    var r = width / 2;
+    var rem = width / 200;
+    draw();
+    setInterval(draw, 1000);
+    </script>
+
+</body>
+</html>

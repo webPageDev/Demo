@@ -1,0 +1,100 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/nav-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css">
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../stylesheets/button.css">
+    <link rel="stylesheet" href="../../stylesheets/shopping/good-list.css">
+    <style>
+        .table {
+            border-collapse: separate;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+            color: #565656;
+            margin: 24px 0 0;
+            max-width: 100%;
+            width: 80%;
+        }
+
+        .left {
+
+        }
+
+        .table th.left:first-child {
+            padding-left: 6px;
+        }
+
+        .table tbody tr:first-child td, .table th {
+            border-top: 0 none;
+        }
+
+        .table td.left, .table th.left {
+            text-align: left;
+        }
+
+        .table td, .table th {
+            font-size: 13px;
+            line-height: 14px;
+            border-top: 1px solid #eee;
+            padding: 10px 12px 11px;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .table tbody tr:first-child td, .table th {
+            border-top: 0 none;
+        }
+
+        .table td, .table th {
+            font-size: 13px;
+            line-height: 14px;
+            border-top: 1px solid #eee;
+            padding: 10px 12px 11px;
+            text-align: center;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <div class="headercss clearFixcss">
+        <img src="../../images/nodejs.svg">
+        <div style="width: 100%">
+        <ul class="bar-style">
+            <li class="sideBar-li"><a href="homepage.html">HomePage</a></li>
+            <li class="sideBar-li"><a href="../htmls/fileOperator.html">FileOperator</a></li>
+            <li class="sideBar-li"><a href="../htmls/input.html">Input</a></li>
+            <li class="sideBar-li"><a href="../htmls/table.html">Table</a></li>
+            <li class="sideBar-li"><a href="../htmls/clock.html">Clock</a></li>
+            <li class="sideBar-li"><a href="../htmls/shopping-homepage.html">Shopping</a></li>
+            <li class="sideBar-li"><a href="../htmls/eCharts.html">ECharts</a></li>
+        </ul>
+    </div>
+        <a target="_blank" href="http://www.expressjs.com.cn/">Express</a>
+    </div>
+
+    <div class="main">
+        <div style="display: flex;width: 100%">
+            <div id="chartmainLine" style="width:49%; height: 400px;"></div>
+            <div id="chartmainBar1" style="width:49%; height: 400px;"></div>
+            <div id="chartmainBar2" style="width:49%; height: 400px;"></div>
+        </div>
+
+    </div>
+    <script type="application/javascript" src="../common/echarts.min.js"></script>
+    <script type="application/javascript" src="../common/jquery.min.js"></script>
+    <script type="application/javascript" src="../common/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../frontend/echarts.js"></script>
+    
+    <script>
+        $(function () {
+            setChartMainBar2();
+        });
+    </script>
+    <script>
+        $(function () {
+            setChartMainLine();
+        });
+    </script>
+</body>
+</html>

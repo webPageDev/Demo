@@ -1,0 +1,92 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/nav-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css">
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../stylesheets/button.css">
+    <script type="application/javascript" src="../../javascripts/common/jquery.min.js"></script>
+    <script type="application/javascript" src="../../javascripts/common/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../../javascripts/frontend/buttons.js"></script>
+</head>
+<body>
+
+    <div class="headercss clearFixcss">
+        <img src="../../images/nodejs.svg">
+        <div style="width: 100%">
+        <ul class="bar-style">
+            <li class="sideBar-li"><a href="../../javascripts/htmls/homepage.html">HomePage</a></li>
+            <li class="sideBar-li"><a href="../../javascripts/htmls/fileOperator.html">FileOperator</a></li>
+            <li class="sideBar-li"><a href="../../javascripts/htmls/input.html">Input</a></li>
+            <li class="sideBar-li"><a href="../../javascripts/htmls/table.html">Table</a></li>
+            <li class="sideBar-li"><a href="../../javascripts/htmls/clock.html">Clock</a></li>
+            <li class="sideBar-li"><a href="../../javascripts/htmls/shopping-homepage.html">Shopping</a></li>
+            <li class="sideBar-li"><a href="../../javascripts/htmls/eCharts.html">ECharts</a></li>
+        </ul>
+    </div>
+        <a target="_blank" href="http://www.expressjs.com.cn/">Express</a>
+    </div>
+    
+    <div class="main">
+        <div style="display: flex;margin-top: 50px;margin-left: 50px;">
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+                        data-toggle="dropdown">
+                    下拉按钮
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation ">
+                        <a tabindex="1" onclick="onClickButton()">下拉按钮1</a></li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="2" onclick="onClickButton()">下拉按钮2</a>
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="3" onclick="onClickButton()">下拉按钮3</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-success">success</button>
+            <button class="btn btn-warning">warning</button>
+            <button class="btn btn-danger">danger</button>
+        </div>
+        <div style="margin-top: 50px;margin-left: 50px;">
+              
+           <div class="tab-body">
+           <div class="tab-back">
+               <div class="tab-button" onclick="clickfirst()">First Tab</div>
+               <div class="tab-button" onclick="clicksecond()">Second Tab</div>
+               <div class="tab-button">Last</div>
+      
+           </div>
+           <div style="display: block;border-width: 0;padding: 1em 1.4em;background: none;float: left;width: 100%;"></div>
+           <div id='xxxxx1' class="tab-div">content first content firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent firstcontent first</div>
+           <div id='xxxxx2' class="tab-div">content secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent secondcontent second</div>
+               
+           </div>
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+    $(function(){
+        $('#xxxxx1').show();
+        $('#xxxxx2').hide();
+        $(".tab-button").eq(0).addClass('auto-class');
+        $(".tab-button").eq(1).removeClass('auto-class');
+    })
+    function clickfirst(){
+        $('#xxxxx1').show();
+        $('#xxxxx2').hide();
+        $(".tab-button").eq(0).addClass('auto-class');
+        $(".tab-button").eq(1).removeClass('auto-class');
+    }
+    function clicksecond(){
+         $('#xxxxx2').show();
+        $('#xxxxx1').hide();
+        $(".tab-button").eq(1).addClass('auto-class');
+        $(".tab-button").eq(0).removeClass('auto-class');
+    }
+</script>
+</body>
+</html>

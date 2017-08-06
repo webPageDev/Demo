@@ -1,0 +1,76 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/nav-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css">
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../stylesheets/uploaderfile.css">
+    <script type="application/javascript" src="../../javascripts/common/jquery.min.js"></script>
+    <script type="application/javascript" src="../../javascripts/common/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../../javascripts/frontend/file.js"></script>
+    <script type="application/javascript" src="../../javascripts/common/jquery.form.js"></script>
+    <script type="application/javascript" src="../../javascripts/common/ajaxfileupload.js"></script>
+</head>
+<body>
+    <div class="headercss clearFixcss">
+        <img src="../../images/nodejs.svg">
+        <div style="width: 100%">
+        <ul class="bar-style">
+            <li class="sideBar-li"><a href="homepage.html">HomePage</a></li>
+            <li class="sideBar-li"><a href="../htmls/fileOperator.html">FileOperator</a></li>
+            <li class="sideBar-li"><a href="../htmls/input.html">Input</a></li>
+            <li class="sideBar-li"><a href="../htmls/table.html">Table</a></li>
+            <li class="sideBar-li"><a href="../htmls/clock.html">Clock</a></li>
+            <li class="sideBar-li"><a href="../htmls/shopping-homepage.html">Shopping</a></li>
+            <li class="sideBar-li"><a href="../htmls/eCharts.html">ECharts</a></li>
+        </ul>
+    </div>
+        <a target="_blank" href="http://www.expressjs.com.cn/">Express</a>
+    </div>
+    <div class="main">
+        <div style="display: flex;margin-top: 50px;margin-left: 50px;flex-direction: column;">
+            <span>Mul File upload:</span>
+            <div id="fileuploader">Upload</div>
+        </div>
+        <div style="display: flex;margin-top: 50px;margin-left: 50px;flex-direction: column;">
+            <span>Simple File upload:</span>
+            <form id="myform">
+                <input type="file" id="u_photo" name="userPhoto"/>
+                <input type="button" id="submit-btn" value="Upload"/>
+            </form>
+        </div>
+        <div style="display: flex;margin-top: 50px;margin-left: 50px;flex-direction: column;">
+            <span>File download:</span>
+            <div style="    border-style: solid;    width: 200px;    text-align: center;cursor: pointer"
+                 name="downloadfile" onclick="downloadFileFunction()">DownLoader
+            </div>
+            <span>File download:</span>
+            <a style="border-style: solid;width: 200px;text-align: center;margin-top:10px;"
+               href="/downloadfilerouter">
+                Use A download
+            </a>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#fileuploader").uploadFile({
+                url:"http://127.0.0.1:3200/uploadfile",
+                fileName:"userPhoto"
+            });
+            $('#submit-btn').on('click', function () {
+                $.ajax({
+                    url: 'http://127.0.0.1:3200/uploadfile',
+                    type: 'post',
+                    data: new FormData($('#myform').get(0)),
+                    cache:false,
+                    processData: false,
+                    contentType:false,
+                    success:function () {
+                        alert('upload sucess...');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

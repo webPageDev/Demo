@@ -1,0 +1,116 @@
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 43px;
+    border-bottom: 1px solid #979797;
+    background: #fff;
+    z-index: 99;
+}
+
+.nav-menu > a {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #dc2c30;
+    text-decoration: none;
+}
+
+.tab-list-nav {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 43px;
+}
+
+.active {
+    color: red;
+}
+
+.tab-list-nav > li:first-child {
+    display: inline-block;
+    width: 58px;
+    cursor: pointer;
+}
+
+.tab-list-nav > li:nth-child(2) {
+    display: inline-block;
+    width: 58px;
+    cursor: pointer;
+    margin-left: 6%;
+}
+
+.tab-list-nav > li:nth-child(3) {
+    display: inline-block;
+    width: 58px;
+    cursor: pointer;
+    margin-left: 6%;
+}
+
+.tab-line-nav {
+    position: relative;
+    width: 58px;
+    height: 4px;
+    bottom: 0;
+    left: 54px;
+    background: #dc2c30;
+    text-align: center;
+    margin: 0;
+    margin-top: -3px;
+}
+
+.goods-btm {
+    display: -webkit-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    border-top: 1px solid #999;
+}
+
+.goods-btm > div:first-child {
+    line-height: 48px;
+    display: -webkit-box;
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid #999;
+}
+
+.goods-btm > div:first-child > div {
+    width: 50%;
+    text-align: center;
+    border-right: 1px solid #999;
+}
+
+.goods-btm > div:first-child > div:last-child {
+    width: 50%;
+    text-align: center;
+}
+
+.goods-btm > div:nth-child(2) {
+    color: #fff;
+    display: -webkit-box;
+    line-height: 48px;
+    width: 70%;
+    height: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.goods-btm > div:nth-child(2) > div:first-child {
+     opacity: 0.5;
+     width: 50%;
+     text-align: center;
+     border-right: 1px solid #999;
+     background-color: #dc2c30;
+ }
+.goods-btm > div:nth-child(2) > div:nth-child(2) {
+    width: 50%;
+    text-align: center;
+    background-color: #dc2c30;
+}

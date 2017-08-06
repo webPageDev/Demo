@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/nav-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/style.css">
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../stylesheets/button.css">
+    <script type="application/javascript" src="../../javascripts/common/jquery.min.js"></script>
+    <script type="application/javascript" src="../../javascripts/common/bootstrap.min.js"></script>
+    <script type="application/javascript" src="../frontend/input.js"></script>
+    <style>
+
+        ul li {
+            list-style: none;
+            padding: 8px 0;
+        }
+
+        ul li label {
+            line-height: 38px;
+            float: left;
+            padding-right: 4%;
+            font-size: 20px;
+            width: 30%
+        }
+
+        ul li input {
+            line-height: 36px;
+            float: left;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            outline: none;
+            border-radius: 4px;
+            padding: 0 6px;
+            line-height: normal;
+            height: 36px;
+            font-size: 20px;
+            width: 60%;
+        }
+
+        ul li input[type="button"] {
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 20px;
+            width: 40%;
+            margin: 0 30%;
+            background: skyblue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="headercss clearFixcss">
+    <img src="../../images/nodejs.svg">
+    <div style="width: 100%">
+        <ul class="bar-style">
+            <li class="sideBar-li"><a href="homepage.html">HomePage</a></li>
+            <li class="sideBar-li"><a href="../htmls/fileOperator.html">FileOperator</a></li>
+            <li class="sideBar-li">
+            <li class="dropdown sideBar-li">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="../htmls/input.html">
+                    Input <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" style="background-color: #6f5499;">
+                    <li><a onclick="getPicFromDB()">商品图片信息</a></li>
+                    <li><a onclick="uploadGoodsInfo()">上传商品信息</a></li>
+                    <li><a onclick="getPageFromDB()">查询商品信息</a></li>
+                </ul>
+            </li>
+            </li>
+            <li class="sideBar-li"><a href="../htmls/table.html">Table</a></li>
+            <li class="sideBar-li"><a href="../htmls/clock.html">Clock</a></li>
+            <li class="sideBar-li"><a href="../htmls/shopping-homepage.html">Shopping</a></li>
+            <li class="sideBar-li"><a href="../htmls/eCharts.html">ECharts</a></li>
+        </ul>
+    </div>
+    <a target="_blank" href="http://www.expressjs.com.cn/">Express</a>
+</div>
+<div class="main">
+    <div id="goods-list">
+        <table id="wifi_clients_table" style="margin-top: 10px;width: 98%;line-height: 38px;border: 1px solid;margin-left: 1%;">
+        </table>
+        <div style="display: flex; margin: 20px 1% 20px;justify-content: flex-end;">
+            <button style="margin-right: 10px; margin-right: 10px; border-radius: 2px;
+                             border: 1px solid black; background-color: rebeccapurple;
+                             color: white;" onclick="upPage()">上一页
+            </button>
+            <button style="margin-right: 10px; border-radius: 2px; border: 1px solid black;
+                             background-color: rebeccapurple; color: white;"
+                    onclick="downPage()">下一页
+            </button>
+        </div>
+    </div>
+
+    <table id="good_pic_table" style="margin-top: 10px;width: 98%;line-height: 38px;border: 1px solid;margin-left: 1%;">
+    </table>
+    <form id="myform" style="display: table-column;">
+        <ul
+          style="line-height: 0px;list-style: none;margin: 0; padding: 0; width: 30%; text-align: center;  margin: 0 35%;">
+            <li class="clearFix">
+                <label>商品名称: </label>
+                <input type="text" name="name" required placeholder="请输入商品名称" value="">
+            </li>
+            <li class="clearFix">
+                <label>商品数量: </label>
+                <input type="text" name="number" required placeholder="请输入商品数量" value="">
+            </li>
+            <li class="clearFix">
+                <label>售卖价格: </label>
+                <input type="text" name="price" required placeholder="请输入售卖价格" value="">
+            </li>
+            <li class="clearFix">
+                <label>原始价格: </label>
+                <input type="text" name="oldprice" required placeholder="请输入原始价格" value="">
+            </li>
+            <li class="clearFix">
+                <label>图片: </label>
+                <input type="text" name="pic" required placeholder="请输入图片" value="">
+            </li>
+            <li class="clearFix">
+                <label>编号: </label>
+                <input type="text" name="id" required placeholder="请输入编号" value="">
+            </li>
+            <li class="clearFix">
+                <input type="button" id="submit" onclick="postData()" value="提交">
+            </li>
+        </ul>
+    </form>
+
+</div>
+<script>
+    $(function () {
+        getPageFromDB();
+    })
+</script>
+</body>
+</html>

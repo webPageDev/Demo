@@ -1,0 +1,108 @@
+.eva-thumb {
+    margin-bottom: 50px;
+}
+.rushbuy-active {
+    text-decoration: none;
+    background: #f4e2e3;
+    display: block;
+    height: 20px;
+    position: relative;
+    padding: 10px 8px 8px;
+    font-size: 13px;
+}
+.rushbuy-active > i {
+    background: #dc2c30;
+    color: white;
+    font-style: normal;
+    border-radius: 4px;
+    display: inline-block;
+    height: 20px;
+    width: 52px;
+    line-height: 19px;
+    text-align: center;
+    margin-right: 2px;
+}
+.rushbuy-active > .time {
+    position: absolute;
+    right: 8px;
+}
+.rushbuy-active > span {
+    color: #444;
+}
+.priceinfo {
+    position: relative;
+    margin: 0 7px;
+    padding: 13px 9px;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+}
+.detail-thumb {
+    /*margin-bottom: 49px;*/
+}
+.detail-thumb > .priceinfo > .curr-price {
+    display: inline-block;
+    margin: 0 9px;
+    font-size: 20px;
+    color: #dc2c30;
+    font-weight: bold;
+    padding: 0;
+    border: 0;
+}
+.detail-thumb > .priceinfo > .market-price {
+    display: inline-block;
+    color: #999;
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #999;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.eva-tit {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7px;
+    padding: 14px 9px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.eva-tit > .left, .right {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 14px;
+    font-size: 14px;
+    color: #444;
+}
+
+.eva-list {
+    margin: 0 7px;
+    padding: 0px;
+    border: 0px;
+    font-size: 12px;
+}
+.eva-list > li {
+    padding: 9px;
+    border-bottom: 1px;
+}
+.eva-list-tit {
+    font-size: 12px;
+}
+.eva-list-tit > .eva-list-tit-pp{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.eva-list-tit-pp > .user{
+    margin-right: 16px;
+}
+.eva-list-con > .eva-img {
+    margin-top: 8px;
+}
+.eva-list-con > .eva-img  img {
+    margin-left: 5px;
+    width: 80px;height: 80px;
+    border: 1px solid #e3e3e3;
+}
+.eva-list > li {
+    border-bottom: 1px solid #e3e3e3;
+}
