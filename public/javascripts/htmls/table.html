@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="../../stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="../../stylesheets/button.css">
     <link rel="stylesheet" href="../../stylesheets/shopping/good-list.css">
+    <script type="application/javascript" src="../common/jquery.min.js"></script>
+    <script type="application/javascript" src="../common/bootstrap.min.js"></script>
+    <script src="../frontend/table.js"></script>
 <style>
     .table {
         border-collapse: separate;
@@ -44,35 +47,38 @@
                 <th>Can Cast Fireball</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>Harry</td>
-                <td>Gryffindor</td>
-                <td>Yes</td>
-                <td>No</td>
-            </tr>
-            <tr>
-                <td>Gandalf</td>
-                <td>Hobbits</td>
-                <td>Maybe?</td>
-                <td>I don&apos;t think so...</td>
-            </tr>
-            <tr>
-                <td>Obi-Wan Kenobi</td>
-                <td>Republic/Rebellion</td>
-                <td>No</td>
-                <td>No</td>
-            </tr>
-            <tr>
-                <td>Merlin</td>
-                <td>King Arthur</td>
-                <td>Probably invented the tournament</td>
-                <td>Solid maybe</td>
-            </tr>
+            <tbody id="table_body">
             </tbody>
         </table>
+        <button style="margin-right: 10px; margin-right: 10px; border-radius: 2px;
+                             border: 1px solid black; background-color: rebeccapurple;
+                             color: white;" id="button_up"
+                onclick="upStep()">上一页
+        </button>
+        <button style="margin-right: 10px; border-radius: 2px; border: 1px solid black;
+                             background-color: rebeccapurple; color: white;" id="button_down"
+                onclick="downStep()">下一页
+        </button>
     </div>
-    <script type="application/javascript" src="../common/jquery.min.js"></script>
-    <script type="application/javascript" src="../common/bootstrap.min.js"></script>
+
+    <script type="application/javascript">
+        $(function () {
+            init_table(table_body, button_up, button_down);
+            console.log('jjjjjj')
+        })
+    </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
