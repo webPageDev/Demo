@@ -24,8 +24,9 @@ var data_list = [
     {'col1': 'name122', 'col2': 'name1', 'col3': 'name1', 'col4': 'name1'},
     {'col1': 'name123', 'col2': 'name1', 'col3': 'name1', 'col4': 'name1'}
 ];
-function init_table(table_body, button_up, button_down) {
-    console.log('xxxx')
+function init_table(table_body) {
+    console.log('xxxx');
+    $(table_body).empty();
     var show_number = 5;
     if(step<0){
         step =0;
@@ -44,8 +45,7 @@ function init_table(table_body, button_up, button_down) {
         listToShow = listToShow + init_col(data_list[i]);
     }
     $(table_body).append(listToShow);
-    // $(button_up).text(step);
-    // $(button_down).text(step+1);
+    $('#latepage_id').text('第'+(step+1)+'页/共'+parseInt(1+data_list.length/5)+'页');
 }
 function init_col(data) {
     var html_data =
@@ -59,21 +59,17 @@ function init_col(data) {
 }
 function upStep() {
     step = step-1;
-    $(table_body).empty();
-    init_table(table_body, button_up, button_down);
+    init_table(table_body);
 }
 function downStep() {
     step = step+1;
-    $(table_body).empty();
-    init_table(table_body, button_up, button_down);
+    init_table(table_body);
 }
-
-
-
-
-
-
-
-
-
-
+function firstPage() {
+    step=0;
+    init_table(table_body);
+}
+function lastPage() {
+    step = data_list.length;
+    init_table(table_body);
+}

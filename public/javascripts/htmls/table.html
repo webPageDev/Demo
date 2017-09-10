@@ -50,21 +50,38 @@
             <tbody id="table_body">
             </tbody>
         </table>
-        <button style="margin-right: 10px; margin-right: 10px; border-radius: 2px;
+        <div>
+            <button style="margin-right: 10px; margin-right: 10px; border-radius: 2px;
                              border: 1px solid black; background-color: rebeccapurple;
-                             color: white;" id="button_up"
-                onclick="upStep()">上一页
-        </button>
-        <button style="margin-right: 10px; border-radius: 2px; border: 1px solid black;
+                             color: white;"
+                    onclick="firstPage()">第一页
+            </button>
+            <button style="margin-right: 10px; margin-right: 10px; border-radius: 2px;
+                             border: 1px solid black; background-color: rebeccapurple;
+                             color: white;"
+                    onclick="upStep()">上一页
+            </button>
+            <button style="margin-right: 10px; border-radius: 2px; border: 1px solid black;
                              background-color: rebeccapurple; color: white;" id="button_down"
-                onclick="downStep()">下一页
-        </button>
+                    onclick="downStep()">下一页
+            </button>
+            <button style="margin-right: 10px; margin-right: 10px; border-radius: 2px;
+                             border: 1px solid black; background-color: rebeccapurple;
+                             color: white;"
+                    onclick="lastPage()">最后一页
+            </button>
+            <button style="margin-right: 10px; margin-right: 10px; border-radius: 2px;
+                             border: 1px solid black; background-color: rebeccapurple;
+                             color: white;" id="latepage_id"
+                    onclick="lastPage()">最后一页
+            </button>
+        </div>
+
     </div>
 
     <script type="application/javascript">
         $(function () {
-            init_table(table_body, button_up, button_down);
-            console.log('jjjjjj')
+            init_table(table_body);
         })
     </script>
 </body>
